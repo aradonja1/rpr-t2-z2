@@ -102,4 +102,14 @@ public class Interval {
         else s = s + ")";
         return  s;
     }
+
+    @Override
+    public boolean equals(Object interval1) {
+        Interval interval = (Interval) interval1;
+        if( this.getPocetnaTacka() == interval.getPocetnaTacka() && this.getKrajnjaTacka() == interval.getKrajnjaTacka()
+            && this.isPocetnaTackaPripada() == interval.isPocetnaTackaPripada() && this.isKrajnjaTackaPripada() == interval.isKrajnjaTackaPripada() )
+            return  true;
+        return false;
+    }
 }
+
